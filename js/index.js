@@ -41,7 +41,7 @@ myElement.lastElementChild.setAttribute("class", "unhealthy")
 const node = document.createElement("li")
 node.setAttribute("id", "4")
 node.setAttribute("class", "healthy")
-const textnode = document.createTextNode("Banan")
+const textnode = document.createTextNode("Banana")
 node.appendChild(textnode)
 myElement.appendChild(node)
 
@@ -67,4 +67,9 @@ for (let index = myList1.length - 1; index >= 0; index--) {
     const element = myList1[index];
     myList2.insertBefore(element, myList2.children[0])
 }
+
+myElement = document.getElementById("list")
+myElement.firstElementChild.textContent = "Green pepper"
+myElement.removeChild(myElement.lastElementChild)
+
 
