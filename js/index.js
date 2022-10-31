@@ -91,4 +91,17 @@ document.getElementById("AddItem").addEventListener("click", function(){
     const name = document.getElementById("name").value
     const sundhed = document.getElementById("sundhed").value
     document.getElementById("list").appendChild(Create(name, sundhed))
+
+    if (sundhed == "unhealthy") {
+        document.getElementById("listUnhealthy").appendChild(Create(name,sundhed))
+    }
+})
+
+document.getElementById("list").addEventListener("click", function(e){
+    let clickElement = e.target
+
+    if (e.target && clickElement.nodeName == "LI") {
+        console.log(clickElement.id + "Was clicked")
+        clickElement.setAttribute("hidden","true")
+    }
 })
