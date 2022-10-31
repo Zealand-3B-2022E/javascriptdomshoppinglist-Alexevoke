@@ -72,11 +72,8 @@
 // myElement.firstElementChild.textContent = "Green pepper"
 // myElement.removeChild(myElement.lastElementChild)
 
-let count = 4
-
 function Id(){
-    const id = count
-    count++
+    const id = document.getElementsByTagName("li").length
     return id
 }
 
